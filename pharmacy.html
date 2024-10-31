@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div style="padding: 20px; background-color: #f9f9f9; border-radius: 10px;">
+        <h2 style="color: #0288d1;">Pharmacy</h2>
+        <form method="POST" style="margin-bottom: 20px;">
+            <div style="margin-bottom: 15px;">
+                <label for="name" style="display: block; margin-bottom: 5px;">Medicine Name:</label>
+                <input type="text" id="name" name="name" required style="padding: 8px; width: 100%; box-sizing: border-box; border-radius: 5px; border: 1px solid #ccc;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="quantity" style="display: block; margin-bottom: 5px;">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" required style="padding: 8px; width: 100%; box-sizing: border-box; border-radius: 5px; border: 1px solid #ccc;">
+            </div>
+            <button type="submit" style="padding: 10px 20px; background-color: #0288d1; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Add Medicine</button>
+        </form>
+        <h3 style="color: #0288d1;">Available Medicines:</h3>
+        <ul style="list-style-type: none; padding: 0;">
+            {% for medicine in medicines %}
+                <li style="padding: 10px; background-color: #e0f7fa; margin-bottom: 10px; border-radius: 5px;">{{ medicine.name }} - {{ medicine.quantity }} units</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

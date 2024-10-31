@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div style="padding: 20px; background-color: #f0f4f8; border-radius: 10px;">
+        <h2 style="color: #0288d1;">Doctors</h2>
+        <form method="POST" style="margin-bottom: 20px;">
+            <div style="margin-bottom: 15px;">
+                <label for="name" style="display: block; margin-bottom: 5px;">Doctor Name:</label>
+                <input type="text" id="name" name="name" required style="padding: 8px; width: 100%; box-sizing: border-box; border-radius: 5px; border: 1px solid #ccc;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="specialization" style="display: block; margin-bottom: 5px;">Specialization:</label>
+                <input type="text" id="specialization" name="specialization" required style="padding: 8px; width: 100%; box-sizing: border-box; border-radius: 5px; border: 1px solid #ccc;">
+            </div>
+            <button type="submit" style="padding: 10px 20px; background-color: #0288d1; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Add Doctor</button>
+        </form>
+        <h3 style="color: #0288d1;">Doctors List:</h3>
+        <ul style="list-style-type: none; padding: 0;">
+            {% for doctor in doctors %}
+                <li style="padding: 10px; background-color: #e0f7fa; margin-bottom: 10px; border-radius: 5px;">{{ doctor.name }} - {{ doctor.specialization }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

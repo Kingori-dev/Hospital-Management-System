@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #e0f7fa; /* Light blue background */
+            color: #333; /* Darker text for contrast */
+        }
+        header {
+            background-color: #0288d1; /* Bright blue header */
+            color: #fff; /* White text */
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+             /* Light blue background for the box */
+            border-radius: 8px; /* Box with rounded corners */
+            justify-content: center; /* Center the nav items */
+        }
+        nav a {
+            padding: 10px 15px;
+            color: #0288d1; /* Blue text for links */
+            background-color: #fff; /* White background for individual items */
+            border-radius: 8px; /* Rounded corners for individual items */
+            text-decoration: none;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 18px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            border: 1px solid #0288d1; /* Border for individual items */
+        }
+        nav a:hover {
+            color: #01579b; /* Darker blue on hover */
+            background-color: #e1f5fe; /* Lighter blue on hover */
+        }
+        .content {
+            padding: 20px;
+            background-color: #ffffff; /* White content area */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hospital Management System</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('doctors') }}">Doctors</a>
+            <a href="{{ url_for('pharmacy') }}">Pharmacy</a>
+            <a href="{{ url_for('patients') }}">Patients</a>
+            <a href="{{ url_for('chart') }}">Performance Chart</a>
+        </nav>
+    </header>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

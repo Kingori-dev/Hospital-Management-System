@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div style="padding: 20px; background-color: #f9f9f9; border-radius: 10px;">
+        <h2 style="color: #0288d1;">Patients</h2>
+        <p>Manage patients here.</p>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 20px; text-align: left;">
+            <thead>
+                <tr style="background-color: #0288d1; color: #fff;">
+                    <th style="padding: 10px; border: 1px solid #ccc;">Name</th>
+                    <th style="padding: 10px; border: 1px solid #ccc;">Age</th>
+                    <th style="padding: 10px; border: 1px solid #ccc;">Location</th>
+                    <th style="padding: 10px; border: 1px solid #ccc;">Outpatient/Inpatient</th>
+                    <th style="padding: 10px; border: 1px solid #ccc;">Prescription</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background-color: #e0f7fa;">
+                    <td style="padding: 10px; border: 1px solid #ccc;">John Doe</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">45</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">Nairobi</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">Inpatient</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">Aspirin</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ccc;">Jane Smith</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">30</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">Embu</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">Outpatient</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">Ibuprofen</td>
+                </tr>
+                <tr style="background-color: #e0f7fa;">
+                    <td style="padding: 10px; border: 1px solid #ccc;">Alice Kimani</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">29</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">Mombasa</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">Inpatient</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">Paracetamol</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ccc;">David Otieno</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">50</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">Kisumu</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">Outpatient</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">Metformin</td>
+                </tr>
+                <tr style="background-color: #e0f7fa;">
+                    <td style="padding: 10px; border: 1px solid #ccc;">Mary Wanjiru</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">35</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">Nakuru</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">Inpatient</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">Amoxicillin</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
